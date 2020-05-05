@@ -1,0 +1,23 @@
+package number1;
+
+import java.util.Scanner;
+
+public class FactorialUtil {
+
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+		System.out.print("input      =");
+		
+		FactorialUtil util = new FactorialUtil();
+		System.out.println("Result = "+ util.factorial(scanner.nextInt()));
+	}
+	public int factorial(int n) {
+		int sum=1;
+		int a=1;
+		for(a= 1; a<n; a++) {
+			sum*=a;
+		}
+		return sum*=a;
+	}
+	
+}
