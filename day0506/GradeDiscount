@@ -1,0 +1,53 @@
+package controlQuiz;
+
+import java.util.Scanner;
+
+public class GradeDiscount {
+	
+	public static void main(String[] args) {
+		
+		/*
+		 * 고객의 등급(일반, 로얄, 플래티넘 중 하나)과 총 구매금액을 입력받는다.
+		 * 고객의 등급이 플래티넘인 경우, 구매금액의 10%를 할인한다.
+		 * 			로얄인 경우, 구매금액의 3%를 할인한다.
+		 * 			일반인 경우, 구매금액의 1%를 할인한다.
+		 * 결제금액은 총 구매금액에서 할인된 금액만큼을 차감한 금액이다.
+		 * 적립포인트는 결제금액의 3%를 적립한다.
+		 * 
+		 * 출력내용은 
+		 * 		총 구매금액, 고객등급, 할인된 금액, 결제할 금액, 적립된 포인트
+		 * 이다.
+		 */
+		
+		Scanner scanner = new Scanner(System.in);
+		System.out.println("고객의 등급 선택해주세요.\r1.일반\r2.로얄\r3.플래티넘");
+		System.out.println("총 구매금액을 입력해주세요");
+		int grade = scanner.nextInt();
+		int purchase = scanner.nextInt();
+		int payment=0;
+		int discount=0;
+		int point=0;
+		if(grade==1) {
+			discount= (int) (purchase*0.01);
+			payment= purchase-discount;
+			point = (int)(payment*0.03);
+			System.out.println("일반 고객님 총금액은"+purchase+"\t할인된 금액은"+discount+"\t결재할 금액은"
+					+ payment+"\t적립된 포인트는"+point+"입니다.");
+		}else if(grade==2) {
+			discount= (int) (purchase*0.03);
+			payment= purchase-discount;
+			point = (int)(payment*0.03);
+			System.out.println("로얄 고객님 총금액은"+purchase+"\t할인된 금액은"+discount+"\t결재할 금액은"
+					+ payment+"\t적립된 포인트는"+point+"입니다.");
+		}else if(grade==3) {
+			discount= (int) (purchase*0.1);
+			payment= purchase-discount;
+			point = (int)(payment*0.03);
+			System.out.println("플래티넘 고객님 총금액은"+purchase+"\t할인된 금액은"+discount+"\t결재할 금액은"
+				+ payment+"\t적립된 포인트는"+point+"입니다.");
+		}
+		}
+		
+}
+
+
