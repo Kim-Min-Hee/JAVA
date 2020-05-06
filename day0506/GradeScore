@@ -1,0 +1,54 @@
+package controlQuiz;
+
+import java.util.Scanner;
+
+public class GradeScore {
+	
+	public static void main(String[] args) {
+		/*
+		 * 성적표 출력하기
+		 * 		60점 이상힌 경우 합격, 그 외에는 불합격이다.
+		 * 		단, 합격자 중에서 성적이 100점인 경우 전액 장학금을 지급한다.
+		 * 					 성적이 96점 이상인 경우 반액 장학금을 지급한다.
+		 * 		단, 성적이 40점 이하인 경우 다음 응시 기회를 박탈한다.
+		 * 
+		 * Scanner를 사용하여 성적을 입력받고, 입력받은 성적과 그 결과를 출력하는 기능을 만드시오.
+		 * - 똑같은 기능을 if문으로 한 번, switch문으로 한 번 만드시오.
+		 */
+		Scanner scanner = new Scanner(System.in);
+		System.out.println("성적을 입력해주세요.");
+		int score = scanner.nextInt();
+		
+		/*if(score>100 || score<0) {
+			System.out.println("잘못입력하셨습니다.");
+		}else if(score<=100 && score>=60) {
+			System.out.println("합격을 축하드립니다.");
+			if(score==100) {
+				System.out.println("전액 장학금을 지급합니다.");
+			}else if(score>=96) {
+				System.out.println("장학금 반절 지원하겠습니다.");
+			}
+			}else if(score>40) {
+				System.out.println("불합격 하셨습니다. 다음에 응시해주세요.");
+			}else{
+				System.out.println("다음 응시 기회 박탈합니다.");
+			}*/
+		int value = (score-1)/10;
+		switch(value) {
+		case 10: case 9: case 8: case 7: case 6:
+			System.out.println(score+"점이고, 합격하셨습니다.");
+			if(score==100) {
+				System.out.println("전액 장학금을 지급합니다.");
+			}else if(score>=96) {
+				System.out.println("장학금 반절 지원하겠습니다.");
+			}
+			break;
+		case 5: case 4:
+			System.out.println("불합격 하셨습니다. 다음에 응시해주세요.");
+			break;
+		case 3: case 2: case 1:
+			System.out.println("다음 응시 기회 박탈합니다.");
+			break;
+		}
+}
+}
