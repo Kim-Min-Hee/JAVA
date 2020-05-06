@@ -24,6 +24,7 @@ public class DiceEscape {
 			if(randomDice==number ) {
 				System.out.println("탈출성공");
 				System.out.println("내가 입력한 숫자:"+number+",주사위 숫자는:"+randomDice);
+				break;
 			}else {
 				System.out.println("탈출실패");
 				System.out.println("내가 입력한 숫자:"+number+",주사위 숫자는:"+randomDice);
