@@ -1,0 +1,34 @@
+package number1;
+
+public class Prob {
+
+	public static void main(String[] args) {
+		System.out.println("주어진 숫자까지의 구구단을 찍습니다.");
+		System.out.println("=====Sample 1=====");
+		printGugudan(4);
+		
+		System.out.println("=====Sample 2=====");
+		printGugudan(9);
+		
+		System.out.println("=====Sample 3=====");
+		printGugudan(-1);
+		
+		System.out.println("=====Sample 4=====");
+		printGugudan(10);
+	}
+	public static void printGugudan(int no) {
+		if(no<0 || no>9) {
+			System.out.println("구구단 숫자를 잘못 기입하셨습니다.");
+		}else {
+			for(int a=1; a<10; a++) {
+				
+				for(int b=1;b<=no;b++) {
+					System.out.print(b+"*"+a+"="+b*a+"\t");
+			
+		}
+				System.out.println();
+	}
+		}
+	}
+}
+			
