@@ -1,0 +1,40 @@
+package number1;
+
+public class Account {
+	
+	
+	private String Account;
+	private String accNo;
+	private int balance;
+	private int save;
+	private int deposit;
+	int money=0;
+	
+	
+	
+	public String getAccNo() {
+		return accNo;
+	}
+
+
+	public Account(String accNo) {
+		this.accNo=accNo;
+		System.out.println(accNo+"계좌가 개설 되었습니다.");
+	}
+
+	public int getBalance() {
+		return balance;
+	}
+
+	public void save(int money) {
+		balance=money+balance;
+		System.out.println(accNo+"계좌에"+money+"이 입금 되었습니다.");
+	}
+
+	public void deposit(int money) {
+		balance= balance-money;
+		System.out.println(accNo+"계좌에"+money+"이 출금 되었습니다.");
+	}
+
+
+}
